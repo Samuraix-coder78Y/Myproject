@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SUP-MTI Meknès</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --noir: #0b0e14;
+            --bleu: #00d4ff;
+            --violet: #7000ff;
+            --gris: #1a1f29;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--noir);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .barre-n {
+            background: var(--noir);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .logo-mti {
+            font-family: 'Orbitron';
+            font-weight: bold;
+        }
+
+        .ai-n {
+            color: var(--bleu);
+            text-shadow: 0 0 10px var(--bleu);
+        }
+        .btn-c {
+            background: linear-gradient(45deg, var(--violet), var(--bleu));
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-c:hover, .btn-c.active {
+            transform: translateY(-3px);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .t-principal {
+            font-family: 'Orbitron';
+            font-weight: 800;
+            font-size: 3rem;
+            color: #fff;
+        }
+        .txt-n {
+            color: var(--bleu);
+            font-family: 'Orbitron';
+        }
+        
+        .bloc-fusion {
+            border-radius: 30px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-bloc {
+            background: rgba(26, 31, 41, 0.95);
+            border-right: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .tech-input, .form-select.tech-input {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(0, 212, 255, 0.2) !important;
+            color: #fff !important;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .tech-input::placeholder { color: rgba(255, 255, 255, 0.5); 
+        }
+        .tech-input:focus {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2) !important;
+            border-color: var(--bleu) !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .form-select.tech-input option {
+            background-color: var(--gris);
+            color: #fff;
+        }
+        .btn-send {
+            background: linear-gradient(45deg, var(--violet), var(--bleu));
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-family: 'Orbitron';
+            letter-spacing: 1px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn-send:hover {
+            box-shadow: 0 0 20px rgba(112, 0, 255, 0.6);
+            transform: scale(1.02);
+        }
+
+        .map-bloc {
+            background: var(--gris);
+        }
+        .map-bloc iframe {
+            filter: invert(90%) hue-rotate(180deg) contrast(90%);
+        }
+        .map-info {
+            background: linear-gradient(to top, rgba(11, 14, 20, 0.95), transparent);
+            pointer-events: none; 
+        }
+
+        .f-noir {
+            background: #000;
+            border-top: 3px solid var(--bleu);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark barre-n sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo-mti" href="index.html">SUP-MTI <span class="ai-n">AI</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-p">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-p">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+                    <li class="nav-item"><a class="btn-c ms-lg-3 active" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 page-contact">
+        <div class="container py-lg-5">
+            
+            <div class="text-center mb-5 anim-up">
+                <h1 class="t-principal">Contactez-nous</h1>
+                <p class="text-white-50 lead">Notre équipe des admissions est à votre écoute.</p>
+            </div>
+
+            <div class="row g-0 align-items-stretch bloc-fusion anim-up-delay">
+                
+                <div class="col-lg-6">
+                    <div class="contact-bloc p-5 h-100">
+                        <h3 class="txt-n mb-4"><i class="fas fa-paper-plane me-2"></i> Envoyez un message</h3>
+                        
+                        <form action="#" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="text-white mb-2 small">Prénom</label>
+                                    <input type="text" class="form-control tech-input" placeholder="Votre prénom" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="text-white mb-2 small">Nom</label>
+                                    <input type="text" class="form-control tech-input" placeholder="Votre nom" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text-white mb-2 small">Email / Téléphone</label>
+                                    <input type="text" class="form-control tech-input" placeholder="Contact" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text-white mb-2 small">Objet</label>
+                                    <select class="form-select tech-input">
+                                        <option selected>Information sur les formations</option>
+                                        <option>Procédure d'admission</option>
+                                        <option>Partenariats</option>
+                                        <option>Autre demande</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text-white mb-2 small">Message</label>
+                                    <textarea class="form-control tech-input" rows="5" placeholder="Votre message..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn-send w-100 py-3">ENVOYER LA DEMANDE</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="map-bloc h-100 position-relative">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.9542036484656!2d-5.547372924584281!3d33.89083322588147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda044f84da45999%3A0x6295368a5c37651a!2sGroupe%20Scolaire%20SUP-MTI%20Mekn%C3%A8s!5e0!3m2!1sfr!2sma!4v1706640000000!5m2!1sfr!2sma" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; min-height: 500px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <div class="map-info p-4 position-absolute bottom-0 start-0 w-100">
+                            <h5 class="txt-n mb-3"><i class="fas fa-map-marker-alt me-2"></i> Nous trouver</h5>
+                            <p class="text-white mb-1">Ville Nouvelle, Meknès, Maroc</p>
+                            <p class="text-white mb-1">Tél : +212 5 35 52 00 00</p>
+                            <p class="text-white">Email : admission@supmti.ma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="f-noir pt-5">
+        <div class="container text-center">
+            <p class="py-3 mb-0">© 2026 SUP-MTI Meknès</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.anim-up').hide().fadeIn(1000).css('transform', 'translateY(0)');
+        });
+    </script>
+</body>
+</html>
